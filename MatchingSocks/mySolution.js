@@ -20,7 +20,6 @@ function sockMerchant(n, ar) {
       }else{
           ar.splice(i,1)
           console.log(`Array ${ar}`)
-
       }
 
   }while(ar.length>0)
