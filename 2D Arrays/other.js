@@ -1,4 +1,4 @@
-// The array on HackerRank is a 2D array.
+// The array on HackerRank is a 2D array
 test = [
   [1, 1, 1, 0, 0, 0],
   [0, 1, 0, 0, 0, 0],
