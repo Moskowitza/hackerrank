@@ -4,7 +4,7 @@
 // 0 0 2 4 4 0
 // 0 0 0 2 0 0
 // 0 0 1 2 4 0
-const arr = [
+const input = [
   1,
   1,
   1,
@@ -42,34 +42,25 @@ const arr = [
   4,
   0
 ];
-function hourglassSum(arr) {
+function hourglassSum(input) {
+  let arr=new Array(...input)
   let arrayOfSums = [];
-  const ourArray = arr;
+
   let sum=0;
-
-    for (i = 0; i < 4; i++) {
-        console.log(i)
-        console.log("arr[i] "+ arr[i])
-          let sum =  (arr[i] +
-            arr[i + 1] +
-            arr[i + 2] +
-            arr[i + 7] +
-            arr[i + 12] +
-            arr[i + 13] +
-            arr[i + 14]);
-            arrayOfSums.push(sum);
+    for(let j=0; j<=18; j=j+6){
+        // console.log(j)
+        for (i = j; i < 4+j; i++) {
+               sum =  (arr[i] +
+                arr[i + 1] +
+                arr[i + 2] +
+                arr[i + 7] +
+                arr[i + 12] +
+                arr[i + 13] +
+                arr[i + 14]);
+                arrayOfSums.push(sum);
+        }
     }
-    return arrayOfSums;
+    
+    return Math.max(...arrayOfSums);
 }
-console.log(hourglassSum(arr));
-
-  //   for (i = 6; i < 10; i++) {
-  //     arrayOfSums.push(OneSum());
-  //   }
-  //   for (i = 12; i < 16; i++) {
-  //     arrayOfSums.push(OneSum());
-  //   }
-  //   for (i = 18; i < 22; i++) {
-  //     arrayOfSums.push(OneSum());
-  //   }
-  //   console.log(arrayOfSums)
+console.log(hourglassSum(input));
